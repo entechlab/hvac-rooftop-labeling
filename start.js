@@ -1,5 +1,5 @@
 var examples = ["Cooling Tower(new)_leftImg8bit.png", "Cooling Tower-1_leftImg8bit.png", "Cooling Tower-2_leftImg8bit.png", "new_leftImg8bit.png", "new2_leftImg8bit.png"]
-const prefix_url = "https://nyinstituteoftechnology-my.sharepoint.com/:i:/r/personal/akimiyai_nyit_edu/Documents/imgs+masks/"
+const prefix_url = "imgs/"
 
 function add_examples()
 {
