@@ -1,0 +1,10 @@
+0 0 0 background
+29 29 27 AHU
+3 97 253 Chiller
+47 98 14 Chimney
+242 180 62 Condenser Unit
+61 245 61 Cooling Tower
+12 245 226 Duct Work
+255 3 194 RTU
+253 248 0 Solar Hot Water Panel
+255 0 0 Solar Panel
