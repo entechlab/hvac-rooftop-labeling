@@ -1,11 +1,11 @@
 let states = { 'hide-button': true }
 let examples = [
-    'Cooling Tower(new).png',
-    'Cooling Tower-1.png',
-    'Cooling Tower-2.png',
-    'new.png',
-    'new2.png',
-    'duct work.png',
+    'Cooling Tower(new).jpeg',
+    'Cooling Tower-1.jpeg',
+    'Cooling Tower-2.jpeg',
+    'new.jpeg',
+    'new2.jpeg',
+    'duct work.jpeg',
 ]
 const prefix_url = 'public/imgs/'
 
@@ -22,7 +22,7 @@ function getOriginalImgSize(imgSrc) {
 
 function add_examples() {
     for (var i = 0; i < 21; i++) {
-        examples.push('example' + i + '.png')
+        examples.push('example' + i + '.jpeg')
     }
 }
 
