@@ -217,3 +217,13 @@ document.getElementById('hide-button').addEventListener('click', (e) => {
         states[e.target.id] = true
     }
 })
+
+const legend = document.getElementById('legend')
+const toggleButton = document.getElementById('toggle-legend')
+
+toggleButton.addEventListener('click', () => {
+    legend.classList.toggle('invisible')
+    legend.classList.toggle('opacity-0')
+    legend.classList.toggle('opacity-100')
+    legend.classList.toggle('bg-white')
+})
