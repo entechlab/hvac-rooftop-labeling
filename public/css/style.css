@@ -10,7 +10,7 @@
 	position:relative;
 	display:inline-block;
 	height:auto;
-	width:100%;
+	width:auto;
 }
 img {
 	display:block;
@@ -35,6 +35,10 @@ img {
     font-size: 14px;
     pointer-events: none;
     z-index: 1000;
+}
+
+.darkened{
+	filter: brightness(50%);
 }
 
 @tailwind base;

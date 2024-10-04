@@ -1,4 +1,4 @@
-let states = { 'hide-button': true }
+let states = { 'hide-mask-toggle': true }
 let examples = [
     'Cooling Tower(new).jpeg',
     'Cooling Tower-1.jpeg',
@@ -37,7 +37,8 @@ function add_images() {
         new_img.setAttribute('data-original', path)
         path_to_element[path] = img_poly_container
         new_img.src = prefix_url + path + '?csf=1&web'
-        new_img.className = 'object-fill'
+        new_img.className += ' object-fill'
+        new_img.className += ' darkened'
         // br creation
         const br = document.createElement('br')
         // svg creation
@@ -71,7 +72,7 @@ async function readColorMap(path) {
                 let label = line.split(' ').slice(3).join(' ')
                 colorMap[label] = color
             }
-            console.log(colorMap)
+            // console.log(colorMap)
             const legendColorList = document.getElementById('legend-color')
             const legendLabelList = document.getElementById('legend-label')
             for (let label in colorMap) {
@@ -165,7 +166,7 @@ let res = Promise.all([
                 let label = categories[anno['category_id']]
                 polygon.setAttribute('points', scaledPoly)
                 polygon.setAttribute('fill', 'rgba(' + colorMap[label] + ')')
-                polygon.setAttribute('fill-opacity', '0.15')
+                polygon.setAttribute('fill-opacity', '0.3')
                 function showTooltip(event, label) {
                     tooltip.textContent = label
                     tooltip.style.display = 'block'
@@ -175,7 +176,7 @@ let res = Promise.all([
 
                 function hideTooltip() {
                     tooltip.style.display = 'none'
-                    polygon.setAttribute('fill-opacity', '0.15')
+                    polygon.setAttribute('fill-opacity', '0.3')
                 }
 
                 function moveTooltip(event) {
@@ -201,23 +202,25 @@ let res = Promise.all([
         promises.push(promise)
     })
 })
-console.log(res)
 
-document.getElementById('hide-button').addEventListener('click', (e) => {
-    console.log(e.target.id)
+document.getElementById('hide-mask-toggle').addEventListener('change', (e) => {
     if (states[e.target.id]) {
         let polys = document.querySelectorAll('.poly')
         polys.forEach((poly) => poly.setAttribute('style', 'display:none;'))
-        e.target.innerHTML = 'Show Image Labels'
+        // e.target.innerHTML = 'Show Image Labels'
         states[e.target.id] = false
     } else {
         let polys = document.querySelectorAll('.poly')
         polys.forEach((poly) => poly.removeAttribute('style'))
-        e.target.innerHTML = 'Hide Image Labels'
+        // e.target.innerHTML = 'Hide Image Labels'
         states[e.target.id] = true
     }
 })
-
+document.getElementById('darken-toggle').addEventListener('change', (e) => {
+    // toggle darkened style from image
+    let imgs = document.querySelectorAll('img')
+    imgs.forEach((img) => img.classList.toggle('darkened'))
+})
 const legend = document.getElementById('legend')
 const toggleButton = document.getElementById('toggle-legend')
 
