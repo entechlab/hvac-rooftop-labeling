@@ -93,6 +93,54 @@
 			<!--Lead Para-->
 			<p class="py-6">
 				👋 Welcome to the Rooftop HVAC Segmentation! Your task is to accurately label various components related to HVAC systems from aerial images of building rooftops. Use the polygon tool to accurately enclose the given labels similar the following examples provided in the images. There is a table at the bottom of the page with more information about each system if you need further assistance. Good luck!</p>
+
+<p>
+<ol class="list-decimal ml-5 list-inside space-y-2">
+  <li class=" font-semibold ">Rooftop Units(RTU) </li>
+  <p>
+      Look for rectangular shapes with fans on one side (typically, each condenser has one fan). The opposite side of the rectangle houses internal components, possibly with pipes attached (likely gas pipes). Sometimes, steam or chilled water pipes may run through the roof but may not be visible from the top view. These systems usually have DX cooling (direct expansion) with visible fans. If connected to a chiller, you should also see a return pipe. Ducts may be visible on the outside if the system was added later.
+      </p>
+
+  <li class=" font-semibold "> Air-Cooled Chiller</li>
+  <p>
+  Identify by multiple small fans on top of a rectangular structure, typically arranged in two rows. These fans are smaller than those on cooling towers. It may also resemble refrigeration systems, such as those used in grocery stores.
+      </p>
+
+  <li class=" font-semibold "> Condenser Units</li>
+  <p>
+    Small square or rectangular boxes with a single fan visible on top. These units are usually scattered around the roof or near buildings, and the fan will be clearly noticeable from a top view. Look for smaller, isolated units compared to the larger systems.
+      </p>
+
+  <li class=" font-semibold ">Chimney/Exhaust </li>
+  <p>
+  From a top view, these may resemble fans (dome-shaped from above), but the base is often round.
+      </p>
+
+  <li class=" font-semibold ">Solar Panels</li>
+  <p>
+  Look for flat, dark rectangles, usually grouped together in large sections on roofs. They often appear slightly tilted and may cover significant portions of the roof.
+      </p>
+
+  <li class=" font-semibold "> Solar Water Heaters</li>
+  <p>
+      These are also rectangular but have visible pipes attached. They are often next to solar panels and may have a slightly different angle or smaller size. The pipes are key to identifying them.
+      </p>
+
+  <li class=" font-semibold "> Ductwork </li>
+  <p>
+  Look for long, rectangular or cylindrical metal pathways on the roof, often connecting larger HVAC units like RTUs. Ductwork may appear as straight lines or make sharp turns, and it typically runs between the HVAC system and the building interior. The ducts are often exposed if the system was added after the building was constructed.
+      </p>
+
+  <li class=" font-semibold "> Outdoor unit/split system</li>
+  <p>
+  It is challenging to detect it without an angled image because the fan is not visible
+      </p>
+
+</ol>
+<br>
+
+
+</p>
 <div id="image_collection">
   <!-- <img class="object-fill" src="https://nyinstituteoftechnology-my.sharepoint.com/:i:/r/personal/akimiyai_nyit_edu/Documents/imgs+masks/Cooling%20Tower(new)_leftImg8bit.png?csf=1&web=1&e=74HKDU">
   <br></br>
